@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserDao">
+
+    <insert id="insertUser" parameterType="pojo.User">
+        insert into login(user_name,password,email) values (#{user_name},#{password},#{email})
+    </insert>
+<!--    寻找用户-->
+    <select id="findUserByName" parameterType="string" resultType="pojo.User">
+        select * from login where user_name = #{user_name}
+    </select>
+    <select id="findUserByEmail" parameterType="string" resultType="pojo.User">
+        select * from login where email = #{email}
+    </select>
+
+</mapper>
