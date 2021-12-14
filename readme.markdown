@@ -7,3 +7,4 @@
 
 # 运行 
 - 起始运行位置web/index.html
+- 请在src/main/resources/database.properties文件设置自己的数据库信息
